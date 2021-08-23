@@ -1,0 +1,182 @@
+// VARIABLES  **********************************
+
+$color-prim: #7713bf;
+$color-secu: #4cbfbf;
+$color-menu: #888888;
+$color-titu: #1c2126;
+$color-parr: #737373;
+$color-blanco: #ffffff;
+
+// CONFIGURACIONES GENERALES  ******************
+
+* {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+
+  img {
+    vertical-align: top;
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+.boton {
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 42px;
+  filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.color-prim {
+  background: $color-prim;
+  color: $color-blanco;
+}
+
+.color-secu {
+  background: $color-secu;
+  color: $color-titu;
+}
+
+.container {
+  max-width: 90%;
+  width: 1200px;
+  margin: 0px auto;
+}
+
+// MENU DE NAVEGACIÓN  ***********************
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  line-height: 50px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+.menu__marca {
+  position: fixed;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: $color-secu;
+}
+
+.menu__items {
+  line-height: 50px;
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  margin-right: 15px;
+  transition: 1s;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    color: $color-menu;
+    margin-left: 10px;
+  }
+
+  a:hover {
+    padding-bottom: 10px;
+    border-bottom: 5px solid $color-prim;
+  }
+}
+
+// ENCABEZADO / HERO  **********************
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  .hero__img {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(rgba(255, 255, 255, 0.74) 0%, white 100%);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 70px;
+    letter-spacing: 0.02em;
+    line-height: 68px;
+    text-align: left;
+    color: $color-prim;
+    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(200px);
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 22px;
+    text-align: left;
+    color: $color-titu;
+    transform: translateY(205px);
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
+    color: $color-parr;
+    transform: translateY(210px);
+  }
+
+  .hero__boton {
+    transform: translateY(220px);
+  }
+}
+
+// SECCIÓN PRINCIPAL  **********************
+
+section:nth-of-type(1) {
+  background-color: white;
+}
+section:nth-of-type(2) {
+  background-color: royalblue;
+}
+section:nth-of-type(3) {
+  background-color: salmon;
+}
+section:nth-of-type(4) {
+  background-color: seagreen;
+}
+section:nth-of-type(5) {
+  background-color: skyblue;
+}
+section:nth-of-type(6) {
+  background-color: slateblue;
+}
+section:nth-of-type(7) {
+  background-color: tan;
+}
+
+// SECCIÓN PRODUCTOS  *********************

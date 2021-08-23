@@ -1,0 +1,163 @@
+* {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+html img,
+body img {
+  vertical-align: top;
+  width: 100%;
+}
+html a,
+body a {
+  text-decoration: none;
+}
+html p,
+body p {
+  text-align: justify;
+}
+
+.boton {
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 42px;
+  filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.color-prim {
+  background: #7713bf;
+  color: #ffffff;
+}
+
+.color-secu {
+  background: #4cbfbf;
+  color: #1c2126;
+}
+
+.container {
+  max-width: 90%;
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  line-height: 50px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+.menu__marca {
+  position: fixed;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: #4cbfbf;
+}
+
+.menu__items {
+  line-height: 50px;
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  margin-right: 15px;
+  transition: 1s;
+}
+.menu__items li {
+  display: inline-block;
+}
+.menu__items a {
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+  color: #888888;
+  margin-left: 10px;
+}
+.menu__items a:hover {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #7713bf;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero .hero__img {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(rgba(255, 255, 255, 0.74) 0%, white 100%);
+}
+.hero h1 {
+  font-weight: bold;
+  font-size: 70px;
+  letter-spacing: 0.02em;
+  line-height: 68px;
+  text-align: left;
+  color: #7713bf;
+  text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(200px);
+}
+.hero h3 {
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  color: #1c2126;
+  transform: translateY(205px);
+}
+.hero p {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  color: #737373;
+  transform: translateY(210px);
+}
+.hero .hero__boton {
+  transform: translateY(220px);
+}
+
+section:nth-of-type(1) {
+  background-color: white;
+}
+
+section:nth-of-type(2) {
+  background-color: royalblue;
+}
+
+section:nth-of-type(3) {
+  background-color: salmon;
+}
+
+section:nth-of-type(4) {
+  background-color: seagreen;
+}
+
+section:nth-of-type(5) {
+  background-color: skyblue;
+}
+
+section:nth-of-type(6) {
+  background-color: slateblue;
+}
+
+section:nth-of-type(7) {
+  background-color: tan;
+}
+
+/*# sourceMappingURL=estilos.css.map */
