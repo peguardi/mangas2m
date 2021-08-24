@@ -52,13 +52,12 @@ body p {
 .menu {
   position: fixed;
   width: 100vw;
-  line-height: 50px;
+  line-height: 40px;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1;
 }
-
-.menu__marca {
+.menu .menu__marca {
   position: fixed;
   float: left;
   font-weight: bold;
@@ -66,28 +65,47 @@ body p {
   text-align: center;
   color: #4cbfbf;
 }
-
-.menu__items {
-  line-height: 50px;
+.menu .menu__ul,
+.menu .menu__ul2 {
   list-style: none;
   overflow: hidden;
   text-align: right;
   margin-right: 15px;
-  transition: 1s;
+  transition: 0.5s;
 }
-.menu__items li {
+.menu .menu__ul .menu__li,
+.menu .menu__ul2 .menu__li {
   display: inline-block;
 }
-.menu__items a {
+.menu .menu__ul .menu__link,
+.menu .menu__ul2 .menu__link {
   font-weight: normal;
   font-size: 16px;
   text-align: left;
   color: #888888;
   margin-left: 10px;
+  display: block;
+  transition: 100ms;
 }
-.menu__items a:hover {
-  padding-bottom: 10px;
-  border-bottom: 5px solid #7713bf;
+.menu .menu__ul .menu__link:hover,
+.menu .menu__ul2 .menu__link:hover {
+  border-bottom: 3px solid #7713bf;
+  background-color: white;
+}
+.menu .menu__ul .menu__ul2,
+.menu .menu__ul2 .menu__ul2 {
+  display: none;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 5px;
+  min-width: 140px;
+  text-align: left;
+  background-color: white;
+  filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.1));
+}
+.menu .menu__ul .menu__li:hover > .menu__ul2,
+.menu .menu__ul2 .menu__li:hover > .menu__ul2 {
+  display: block;
 }
 
 .hero {
