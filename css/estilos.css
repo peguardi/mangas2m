@@ -52,10 +52,11 @@ body p {
 .menu {
   position: fixed;
   width: 100vw;
-  line-height: 40px;
+  line-height: 50px;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
   z-index: 1;
+  transition: 0.6s;
 }
 .menu .menu__marca {
   position: fixed;
@@ -96,7 +97,7 @@ body p {
 .menu .menu__ul2 .menu__ul2 {
   display: none;
   position: absolute;
-  margin-top: 40px;
+  margin-top: 50px;
   margin-left: 5px;
   min-width: 140px;
   text-align: left;
@@ -106,6 +107,10 @@ body p {
 .menu .menu__ul .menu__li:hover > .menu__ul2,
 .menu .menu__ul2 .menu__li:hover > .menu__ul2 {
   display: block;
+}
+
+.menu.sticky {
+  background-color: white;
 }
 
 .hero {
