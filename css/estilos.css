@@ -92,7 +92,6 @@ body p {
 .menu .menu__ul2 .menu__link:hover {
   border-bottom: 3px solid #7713bf;
   color: black;
-  font-weight: 500;
 }
 .menu .menu__ul .menu__ul2,
 .menu .menu__ul2 .menu__ul2 {
