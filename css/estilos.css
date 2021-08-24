@@ -84,14 +84,15 @@ body p {
   font-size: 16px;
   text-align: left;
   color: #888888;
-  margin-left: 10px;
+  margin-left: 15px;
   display: block;
   transition: 100ms;
 }
 .menu .menu__ul .menu__link:hover,
 .menu .menu__ul2 .menu__link:hover {
   border-bottom: 3px solid #7713bf;
-  background-color: white;
+  color: black;
+  font-weight: 500;
 }
 .menu .menu__ul .menu__ul2,
 .menu .menu__ul2 .menu__ul2 {
@@ -157,30 +158,44 @@ body p {
 
 section:nth-of-type(1) {
   background-color: white;
+  width: 100vw;
+  height: 100vh;
 }
 
 section:nth-of-type(2) {
   background-color: royalblue;
+  width: 100vw;
+  height: 100vh;
 }
 
 section:nth-of-type(3) {
   background-color: salmon;
+  width: 100vw;
+  height: 100vh;
 }
 
 section:nth-of-type(4) {
   background-color: seagreen;
+  width: 100vw;
+  height: 100vh;
 }
 
 section:nth-of-type(5) {
   background-color: skyblue;
+  width: 100vw;
+  height: 100vh;
 }
 
 section:nth-of-type(6) {
   background-color: slateblue;
+  width: 100vw;
+  height: 100vh;
 }
 
 section:nth-of-type(7) {
   background-color: tan;
+  width: 100vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=estilos.css.map */
