@@ -28,15 +28,16 @@
         </div>
         <ul class="menu__ul">
           <li class="menu__li">
-            <a class="menu__link active" href="#">Inicio</a>
+            <a class="menu__link active" data-url="inicio" href="#inicio"
+              >Inicio</a
+            >
           </li>
           <li class="menu__li">
-            <a class="menu__link" href="#productos">Productos</a>
+            <a class="menu__link" data-url="productos" href="#productos"
+              >Productos</a
+            >
 
             <ul class="menu__ul2">
-              <li class="menu__li2">
-                <a class="menu__link" href="#productos">Descripción</a>
-              </li>
               <li class="menu__li2">
                 <a class="menu__link" href="#detalles">Detalles</a>
               </li>
@@ -46,15 +47,16 @@
             </ul>
           </li>
           <li class="menu__li">
-            <a class="menu__link" href="#servicios">Servicios</a>
+            <a class="menu__link" data-url="servicios" href="#servicios"
+              >Servicios</a
+            >
           </li>
           <li class="menu__li">
-            <a class="menu__link" href="#nosotros">Acerca de</a>
+            <a class="menu__link" data-url="nosotros" href="#nosotros"
+              >Nosotros</a
+            >
 
             <ul class="menu__ul2">
-              <li class="menu__li2">
-                <a class="menu__link" href="#nosotros">Nosotros</a>
-              </li>
               <li class="menu__li2">
                 <a class="menu__link" href="#mision">Misión y Visión</a>
               </li>
@@ -62,13 +64,15 @@
           </li>
 
           <li class="menu__li">
-            <a class="menu__link" href="#contacto">Contáctanos</a>
+            <a class="menu__link" data-url="contacto" href="#contacto"
+              >Contáctanos</a
+            >
           </li>
         </ul>
       </div>
     </nav>
     <!-- ENCABEZADO / HERO  ******************************************************** -->
-    <header class="hero">
+    <!-- <header class="hero">
       <div class="hero__img">
         <div class="container">
           <h1 class="hero__h1">Mangas</h1>
@@ -83,13 +87,30 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
-      <!-- SECCIÓN PRODUCTOS  ******************************************************** -->
-      <section id="productos" class="secproduct">
+      <section id="inicio" class="seccion">
+        <div class="hero">
+          <div class="hero__img">
+            <div class="container">
+              <h1 class="hero__h1">Mangas</h1>
+              <h1 class="hero__h1">Pasteleras</h1>
+              <h3 class="hero__h3">Con el mejor diseño y durabilidad</h3>
+              <p class="hero__p">
+                Somos fabricantes, distribuidores y comercializadores de mangas
+                para repostería.
+              </p>
+              <div class="hero__boton">
+                <a href="#productos" class="boton color-prim">Saber más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="productos" class="seccion">
         <div class="container">
-          <h2 class="secproduct__h3">Descripción</h2>
+          <h2 class="secproduct__h3">Productos</h2>
           <p class="secproduct__parrafo">
             Mangas pasteleras de lona antiadherente, nylon impermeable y
             plástico reusable. Resistentes y de fácil limpieza, todas
@@ -99,22 +120,22 @@
           <div class="secprod__card1"></div>
         </div>
       </section>
-      <section id="detalles">
+      <section id="detalles" class="seccion">
         <h2>Detalles</h2>
       </section>
-      <section id="galeria">
+      <section id="galeria" class="seccion">
         <h2>Galería</h2>
       </section>
-      <section id="servicios">
+      <section id="servicios" class="seccion">
         <h2>Servicios</h2>
       </section>
-      <section id="nosotros">
+      <section id="nosotros" class="seccion">
         <h2>Nosotros</h2>
       </section>
-      <section id="mision">
+      <section id="mision" class="seccion">
         <h2>Misión y Visión</h2>
       </section>
-      <section id="contacto">
+      <section id="contacto" class="seccion">
         <h2>Contáctanos</h2>
       </section>
     </main>
