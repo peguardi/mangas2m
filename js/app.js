@@ -1,6 +1,6 @@
 // MENÚ DE NAVEGACIÓN FIJADO POR SCROLL  **************************
 window.addEventListener('scroll', function () {
-  let menu = document.querySelector('.menu');
+  let menu = document.querySelector('.header');
   menu.classList.toggle('sticky', window.scrollY > 0);
 });
 

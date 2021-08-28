@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 html,
@@ -50,69 +52,80 @@ body p {
   margin: 0px auto;
 }
 
-.menu {
+.header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   line-height: 60px;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
   z-index: 1;
   transition: 0.6s;
 }
-.menu .menu__logo {
-  position: fixed;
+
+.header__logo {
+  position: sticky;
   float: left;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
   color: #4cbfbf;
 }
-.menu .menu__ul,
-.menu .menu__ul2 {
-  list-style: none;
+
+.menu {
+  position: fixed;
+  width: 100%;
+  line-height: 57px;
+  align-items: center;
+  z-index: 2;
+  transition: 0.6s;
+}
+
+.menu__ul,
+.menu__ul2 {
   text-align: right;
-  margin-right: 15px;
   transition: 0.5s;
 }
-.menu .menu__ul .menu__li,
-.menu .menu__ul2 .menu__li {
+
+.menu__li {
   display: inline-block;
 }
-.menu .menu__ul .menu__link,
-.menu .menu__ul2 .menu__link {
+
+.menu__link {
+  float: none;
   font-weight: normal;
   font-size: 16px;
   text-align: left;
   color: #888888;
-  margin-left: 15px;
+  margin-left: 10px;
   display: block;
   transition: 100ms;
 }
-.menu .menu__ul .menu__link:hover,
-.menu .menu__ul2 .menu__link:hover {
+
+.menu__link:hover {
   border-bottom: 3px solid #7713bf;
   color: black;
 }
-.menu .menu__ul .menu__link.active,
-.menu .menu__ul2 .menu__link.active {
+
+.menu__link.active {
   border-bottom: 3px solid #7713bf;
   color: black;
 }
-.menu .menu__ul .menu__ul2,
-.menu .menu__ul2 .menu__ul2 {
+
+.menu__ul2 {
   display: none;
   position: absolute;
-  margin-top: 63px;
+  margin-top: 60px;
   min-width: 140px;
-  background-color: white;
+  background-color: whitesmoke;
   filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.1));
+  z-index: 2;
 }
-.menu .menu__ul .menu__li:hover > .menu__ul2,
-.menu .menu__ul2 .menu__li:hover > .menu__ul2 {
+
+.menu__li:hover > .menu__ul2 {
   display: block;
 }
 
-.menu.sticky {
+.header.sticky {
   background-color: white;
   filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.3));
 }
@@ -163,6 +176,7 @@ section:nth-of-type(1) {
   background-color: white;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 section:nth-of-type(2) {
@@ -205,6 +219,25 @@ section:nth-of-type(8) {
   background-color: fuchsia;
   width: 100%;
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    top: 60px;
+    background: #ffffff;
+    width: 70%;
+    height: 100vh;
+  }
+
+  .menu__ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  menu__link {
+    float: none;
+    text-align: right;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

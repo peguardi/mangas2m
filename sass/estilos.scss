@@ -14,6 +14,8 @@ $color-blanco: #ffffff;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 html,
@@ -61,78 +63,87 @@ body {
   margin: 0px auto;
 }
 
-// MENU DE NAVEGACIÓN  ***********************
+// ENCABEZADO Y MENU DE NAVEGACIÓN  ***********************
 
-.menu {
+.header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   line-height: 60px;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
   z-index: 1;
   transition: 0.6s;
-
-  .menu__logo {
-    position: fixed;
-    float: left;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    color: $color-secu;
-  }
-
-  .menu__ul,
-  .menu__ul2 {
-    list-style: none;
-    text-align: right;
-    margin-right: 15px;
-    transition: 0.5s;
-
-    .menu__li {
-      display: inline-block;
-    }
-
-    .menu__link {
-      font-weight: normal;
-      font-size: 16px;
-      text-align: left;
-      color: $color-menu;
-      margin-left: 15px;
-      display: block;
-      transition: 100ms;
-    }
-
-    .menu__link:hover {
-      border-bottom: 3px solid $color-prim;
-      color: black;
-    }
-
-    .menu__link.active {
-      border-bottom: 3px solid $color-prim;
-      color: black;
-    }
-
-    .menu__ul2 {
-      display: none;
-      position: absolute;
-      margin-top: 63px;
-      min-width: 140px;
-      background-color: white;
-      filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.1));
-    }
-
-    .menu__li:hover > .menu__ul2 {
-      display: block;
-    }
-  }
 }
 
-.menu.sticky {
-  background-color: rgba(255, 255, 255, 1);
+.header__logo {
+  position: sticky;
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: $color-secu;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  line-height: 57px;
+  align-items: center;
+  z-index: 2;
+  transition: 0.6s;
+}
+
+.menu__ul,
+.menu__ul2 {
+  text-align: right;
+  transition: 0.5s;
+}
+
+.menu__li {
+  display: inline-block;
+}
+
+.menu__link {
+  float: none;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+  color: $color-menu;
+  margin-left: 10px;
+  display: block;
+  transition: 100ms;
+}
+
+.menu__link:hover {
+  border-bottom: 3px solid $color-prim;
+  color: black;
+}
+
+.menu__link.active {
+  border-bottom: 3px solid $color-prim;
+  color: black;
+}
+
+.menu__ul2 {
+  display: none;
+  position: absolute;
+  margin-top: 60px;
+  min-width: 140px;
+  background-color: whitesmoke;
+  filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.1));
+  z-index: 2;
+}
+
+.menu__li:hover > .menu__ul2 {
+  display: block;
+}
+
+.header.sticky {
+  background-color: white;
   filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-// ENCABEZADO / HERO  **********************
+// SECCIÓN INICIO / HERO  **********************************
 
 .hero {
   width: 100%;
@@ -187,6 +198,7 @@ section:nth-of-type(1) {
   background-color: white;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 section:nth-of-type(2) {
   background-color: royalblue;
@@ -225,3 +237,28 @@ section:nth-of-type(8) {
 }
 
 // SECCIÓN PRODUCTOS  *********************
+
+// PANTALLA DE TABLET  *********************
+@media screen and (max-width: 768px) {
+  .menu {
+    top: 60px;
+    background: $color-blanco;
+    width: 70%;
+    height: 100vh;
+    // left: -100%;
+  }
+
+  .menu__li {
+    // margin-left: 80%;
+  }
+
+  .menu__ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  menu__link {
+    float: none;
+    text-align: right;
+  }
+}
