@@ -1,13 +1,13 @@
 // MENÚ DE NAVEGACIÓN FIJADO POR SCROLL  **************************
 window.addEventListener('scroll', function () {
-  let menu = document.querySelector('.header');
+  let menu = document.querySelector('header');
   menu.classList.toggle('sticky', window.scrollY > 0);
 });
 
-// SELECCIÓN ACTIVA EN MENÚ DE NAVEGACIÓN  **************************
+// SELECCIÓN ACTIVA EN MENÚ DE NAVEGACIÓN POR SCROLL **************************
 addEventListener('DOMContentLoaded', () => {
   const secciones = document.querySelectorAll('.seccion');
-  const menuItems = document.querySelectorAll('.menu__link');
+  const menuItems = document.querySelectorAll('.nav-link');
 
   const funcionObserver = (entries) => {
     entries.forEach((entry) => {
