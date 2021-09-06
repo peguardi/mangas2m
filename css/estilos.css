@@ -35,10 +35,6 @@ html p,
 body p {
   text-align: justify;
 }
-html i,
-body i {
-  padding-left: 10px;
-}
 
 .boton {
   display: inline-block;
@@ -113,7 +109,6 @@ body i {
   font-size: 0.95rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   transition: 0.3s;
 }
 
@@ -293,6 +288,18 @@ body i {
     display: block;
   }
 
+  .nav__overlay {
+    position: fixed;
+    top: 47.5px;
+    width: 100vw;
+    height: calc(100vh);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.6s;
+  }
+
   .nav-btn {
     position: fixed;
     height: calc(100vh - 3rem);
@@ -305,12 +312,18 @@ body i {
     justify-content: space-between;
     overflow-x: hidden;
     overflow-y: auto;
-    transform: translateX(170%);
+    transform: translateX(100%);
     transition: 0.65s;
+    z-index: 95000;
   }
 
-  #check:checked ~ .nav-btn {
-    transform: translateX(30%);
+  .nav--open .nav-btn {
+    transform: translateX(20%);
+  }
+
+  .nav--open .nav__overlay {
+    visibility: visible;
+    opacity: 1;
   }
 
   #check:checked ~ .nav-btn .nav-link,

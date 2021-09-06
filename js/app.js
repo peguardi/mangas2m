@@ -33,3 +33,29 @@ addEventListener('DOMContentLoaded', () => {
 
   secciones.forEach((seccion) => observer.observe(seccion));
 });
+
+// DESPLIEGUE DE OVERLAY EN MENÚ RESPONSIVE **************************
+
+document.addEventListener('DOMContentLoaded', () => {
+  // const nav = document.querySelector('header');
+
+  // document.querySelector('#check').addEventListener('click', () => {
+  //   nav.classList.add('nav--open');
+  // });
+
+  // document.querySelector('.nav__overlay').addEventListener('click', () => {
+  //   nav.classList.remove('nav--open');
+  // });
+
+  const nav = document.querySelector('header');
+  let menuOpen = false;
+  document.querySelector('#check').addEventListener('click', () => {
+    if (!menuOpen) {
+      nav.classList.add('nav--open');
+      menuOpen = true;
+    } else {
+      nav.classList.remove('nav--open');
+      menuOpen = false;
+    }
+  });
+});
