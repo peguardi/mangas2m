@@ -1,65 +1,9 @@
-// VARIABLES  **********************************
+@use '../sass/components/' as *;
 
-$color-prim: #7713bf;
-$color-secu: #4cbfbf;
-$color-alter: #a332f3;
-$color-menu: #888888;
-$color-titu: #1c2126;
-$color-parr: #737373;
+// CONFIGURACIÓN GENERAL  ***************************************
 
-// CONFIGURACIONES GENERALES  ******************
-
-* {
-  top: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
-
-html,
-body {
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  scroll-padding: 60px;
+html {
   font-size: 13px;
-
-  header {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 10;
-    transition: 0.6s;
-  }
-
-  img {
-    vertical-align: top;
-    width: 100%;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  p {
-    text-align: justify;
-  }
-
-  section {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-}
-
-.boton {
-  display: inline-block;
-  border-radius: 1.5625rem;
-  font-size: 0.875rem;
-  text-align: center;
-  padding: 0.75rem 2.625rem;
-  filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.3));
 }
 
 .color-prim {
@@ -79,56 +23,13 @@ body {
   position: relative;
 }
 
-// ENCABEZADO Y MENU DE NAVEGACIÓN  ***********************
-
+// ENCABEZADO Y MENU DE NAVEGACIÓN  ***************************
 header.sticky {
   background-color: white;
   filter: drop-shadow(4px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-// Menu Icon with bars ************************************
-
-.menuBtn {
-  position: absolute;
-  transform: translateY(25%);
-  align-items: center;
-  line-height: 3.75rem;
-  display: inline-block;
-  cursor: pointer;
-  display: none;
-  z-index: 40;
-}
-
-.menuBtn__bar1,
-.menuBtn__bar2,
-.menuBtn__bar3 {
-  width: 2.1875rem;
-  height: 0.3125rem;
-  border-radius: 0.1875rem;
-  background-color: #333;
-  margin: 0.375rem 0;
-  transition: 0.4s;
-}
-
-/* Rotate first bar */
-.change .menuBtn__bar1 {
-  -webkit-transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
-  transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
-}
-
-/* Fade out the second bar */
-.change .menuBtn__bar2 {
-  opacity: 0;
-}
-
-/* Rotate last bar */
-.change .menuBtn__bar3 {
-  -webkit-transform: rotate(45deg) translate(-0.5rem, -0.5rem);
-  transform: rotate(45deg) translate(-0.5rem, -0.5rem);
-}
-
 // Logo Menu **************************************************
-
 .logo {
   display: flex;
   position: sticky;
@@ -140,7 +41,6 @@ header.sticky {
 }
 
 // Nav Menu Bar **********************************************
-
 .menuBtn {
   display: block;
 }
@@ -177,7 +77,7 @@ header.sticky {
   backdrop-filter: blur(2px);
   transition: all 0.3s ease;
   display: none;
-  z-index: 1;
+  z-index: 5;
 }
 
 .navMenu li a,
@@ -229,76 +129,39 @@ header.sticky {
   z-index: 30;
 }
 
+// SECCIÓN INICIO / HERO  **********************************
+.hero__h1 {
+  color: $color-prim;
+}
+
+.hero__h3 {
+  color: $color-titu;
+}
+
+.hero__p {
+  color: $color-parr;
+}
+
 .fas.fa-angle-down {
   float: right;
   padding-right: 8px;
 }
 
-// SECCIÓN INICIO / HERO  **********************************
-.hero {
-  width: 100%;
-  height: 100vh;
-  background: url(../img/hero.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-
-  .hero__img {
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(rgba(255, 255, 255, 0.74) 0%, white 100%);
-  }
-
-  .hero__h1 {
-    font-weight: bold;
-    font-size: 3.75rem;
-    letter-spacing: 0.02em;
-    line-height: 68px;
-    text-align: left;
-    color: $color-prim;
-    text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
-    transform: translateY(140px);
-  }
-
-  .hero__h3 {
-    font-weight: bold;
-    font-size: 1.25rem;
-    text-align: left;
-    color: $color-titu;
-    transform: translateY(145px);
-  }
-
-  .hero__p {
-    font-weight: normal;
-    font-size: 1rem;
-    text-align: left;
-    color: $color-parr;
-    transform: translateY(150px);
-  }
-
-  .hero__boton {
-    transform: translateY(160px);
-  }
-
-  .hero__boton:hover {
-    filter: brightness(125%);
-  }
-
-  .hero__mangaAzul {
-    position: relative;
-    width: 225px;
-    height: 249px;
-    background: url(../img/mangas_hero.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: translateY(150px);
-  }
+.hero__grid {
+  display: grid;
+  gap: 6px;
+  position: relative;
+  top: 120px;
+  grid-template:
+    'h1' auto
+    'h3' auto
+    'p' auto
+    'boton' auto
+    'manga' auto;
 }
 
-// PANTALLA DE TABLET ***************************************
-@media screen and (min-width: 576px) {
+// INICIO - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
   html {
     font-size: 16px;
   }
@@ -309,53 +172,66 @@ header.sticky {
   }
 
   .navMenu__link.active > a {
-    color: $color-prim;
     font-size: 1.25rem;
   }
 
   .active {
-    color: $color-prim;
     font-size: 1.25rem;
   }
 
   .active .dropdown-btn {
-    color: $color-prim;
     font-size: 1.25rem;
   }
 
-  // SECCIÓN INICIO / HERO  **********************************
   .hero__h1 {
+    grid-area: h1;
     font-size: 4.375rem;
   }
 
   .hero__h3 {
+    grid-area: h3;
     font-size: 1.375rem;
   }
 
   .hero__p {
+    grid-area: p;
     font-size: 1.125rem;
   }
 
   .hero__boton {
-    transform: translateY(220px);
+    // padding: 25px 0px;
+    grid-area: boton;
   }
 
-  .hero__mangaAzul {
-    position: relative;
-    width: 470px;
-    height: 394px;
+  .hero__mangas {
+    grid-area: manga;
+    width: 370px;
+    height: 294px;
     background: url(../img/mangas_hero.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    transform: translateY(260px);
+  }
+
+  .hero__grid {
+    top: 180px;
+    gap: 20px;
+    grid-template:
+      'h1 h1 h1 h1' auto
+      'h3 h3 h3 h3' auto
+      'p p p p' auto
+      'boton boton boton boton' auto
+      'manga manga manga manga' auto
+      'manga manga manga manga' auto
+      'manga manga manga manga' auto
+      'manga manga manga manga' auto;
   }
 }
 
-// PANTALLA DE PC ***************************************
-@media screen and (min-width: 769px) {
+// INICIO - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
   html {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .menuBtn {
@@ -373,7 +249,7 @@ header.sticky {
     width: 0%;
     margin-left: 0%;
     height: 0vh;
-    width: 1200px;
+    width: 1300px;
     max-width: 95%;
     margin: 0px auto;
     align-items: center;
@@ -390,74 +266,764 @@ header.sticky {
   .navMenu a:hover,
   .dropdown .dropdown-btn:hover,
   .dropdown-container a:hover {
-    color: $color-prim;
     transform: scale(110%);
+    color: $color-prim;
   }
 
   .navMenu__link.active > a {
-    color: $color-prim;
     font-size: 1rem;
   }
 
   .active {
-    color: $color-prim;
     font-size: 1rem;
   }
 
   .active .dropdown-btn {
-    color: $color-prim;
     font-size: 1rem;
   }
 
+  .hero__boton:hover {
+    filter: brightness(85%);
+  }
+
   .hero__mangaAzul {
-    position: absolute;
+    grid-area: manga;
     width: 588px;
     height: 464px;
     background: url(../img/mangas_hero.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    transform: translateX(50%);
   }
 
-  // SECCIÓN INICIO / HERO  **********************************
-  .hero__h1 {
-    font-size: 4.375rem;
+  .hero__grid {
+    top: 200px;
+    gap: 20px;
+    grid-template:
+      'h1 h1 h1 h1 . . . . manga manga manga manga' auto
+      'h3 h3 h3 h3 . . . . manga manga manga manga' auto
+      'p p p p . . . . manga manga manga manga' auto
+      'boton boton boton boton . . . . manga manga manga manga' auto;
+  }
+}
+
+// SECCIÓN PRODUCTOS  *************************************
+.prod__fig {
+  grid-area: fig;
+  width: 768px;
+  height: 281.5px;
+  background: url('../img/prod_tablet.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.prod__grid {
+  display: grid;
+  gap: 1.875rem;
+  justify-content: center;
+  position: relative;
+  grid-template:
+    'card1' auto
+    'card2' auto
+    'card3' auto
+    'fig' auto;
+}
+
+// PRODUCTOS - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 16;
   }
 
-  .hero__h3 {
-    font-size: 1.375rem;
-    transform: translateY(205px);
+  .prod__espa {
+    height: 120px;
   }
 
-  .hero__p {
-    font-size: 1.125rem;
-    transform: translateY(210px);
+  .prod__fig {
+    grid-area: fig;
+    width: 85.375rem;
+    height: 300.27px;
+    background: url('../img/prod_pc.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
-  .hero__boton {
-    transform: translateY(220px);
+  .prod__grid {
+    grid-template:
+      'card1 card2' auto
+      'card3 fig' auto;
+  }
+}
+
+// PRODUCTOS - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 18;
   }
 
-  .hero__boton:hover {
-    filter: brightness(125%);
+  .prod__card3 {
+    position: relative;
+  }
+
+  .prod__grid {
+    grid-template: 'card1 card2 card3' auto;
+  }
+}
+
+// SECCIÓN DETALLES  *************************************
+#detalles {
+  display: block;
+
+  span {
+    color: $color-secu;
+  }
+}
+
+.detail__h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.875rem;
+  text-align: center;
+  color: $color-titu;
+  padding: 1.25rem;
+}
+
+.detail__asa {
+  grid-area: asa;
+
+  .detail__a {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_asa.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+    // z-index: 1;
+  }
+  .detail__p1 {
+    // grid-area: p1;
+    width: 14.375rem;
+    height: 6.25rem;
+    color: $color-parr;
+    text-align: center;
+    // z-index: 1;
+  }
+}
+
+.detail__med {
+  grid-area: med;
+
+  .detail__m {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_medida.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+    // z-index: 1;
+  }
+  .detail__p2 {
+    // grid-area: p2;
+    width: 14.375rem;
+    height: 9.375rem;
+    color: $color-parr;
+    text-align: center;
+    // z-index: 1;
+  }
+}
+
+.detail__bor {
+  grid-area: bor;
+
+  .detail__b {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_borde.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+    // z-index: 1;
+  }
+
+  .detail__p3 {
+    // grid-area: p3;
+    width: 14.375rem;
+    height: 6.25rem;
+    color: $color-parr;
+    text-align: center;
+    // z-index: 1;
+  }
+}
+
+.detail__boc {
+  grid-area: boc;
+
+  .detail__bo {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_boca.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+    // z-index: 1;
+  }
+
+  .detail__p4 {
+    // grid-area: p4;
+    width: 14.375rem;
+    height: 6.25rem;
+    color: $color-parr;
+    text-align: center;
+    // z-index: 1;
+  }
+}
+
+.detail__fig {
+  grid-area: fig;
+  width: 768px;
+  height: 281.5px;
+  background: url('../img/detail_1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.detail__grid {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 3.75rem;
+  grid-template:
+    'asa' auto
+    'med' auto
+    'bor' auto
+    'boc' auto
+    'fig' auto;
+}
+
+// DETALLES - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 16;
+  }
+
+  .detail__p4 {
+    position: relative;
+  }
+
+  .detail__fig {
+    grid-area: fig;
+    width: 85.375rem;
+    height: 300.27px;
+    background: url('../img/detail_2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .detail__grid {
+    display: grid;
+    justify-content: space-around;
+    position: relative;
+    gap: 0.5rem;
+    padding: 1.875rem;
+    grid-template:
+      'asa med'
+      'boc bor'
+      'fig fig';
+  }
+}
+
+// DETALLES - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 18;
+  }
+
+  .detail__grid {
+    display: grid;
+    justify-content: space-around;
+    position: relative;
+    gap: 0.5rem;
+    padding: 1.875rem;
+    grid-template:
+      'asa med'
+      'boc bor'
+      'fig fig';
+  }
+}
+
+// GALERÍA  **************************************************
+#galeria {
+  display: block;
+}
+
+.galeria__h2 {
+  color: $color-titu;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.875rem;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.galeria__p {
+  color: $color-parr;
+  letter-spacing: 0.03rem;
+  line-height: 24px;
+  padding: 1.5625rem 0rem;
+  text-align: center;
+}
+
+.galeria__imgc1 {
+  grid-area: img1;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MLOUN_04.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc2 {
+  grid-area: img2;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MLOUN_07.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc3 {
+  grid-area: img3;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MLOUN_10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc4 {
+  grid-area: img4;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MLOUN_16.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc5 {
+  grid-area: img5;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MNYLO_02.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc6 {
+  grid-area: img6;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MNYLO_05.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc7 {
+  grid-area: img7;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MNYLO_06.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc8 {
+  grid-area: img8;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MNYLO_18.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__imgc9 {
+  grid-area: img9;
+  position: absolute;
+  width: 11.25rem;
+  height: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
+
+  .galeria__img {
+    width: 11.25rem;
+    max-width: 200px;
+    height: 180px;
+    background: url(../img/MPLAS_09.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.galeria__fig {
+  grid-area: fig;
+  width: 768px;
+  height: 405px;
+  background: url('../img/galeria_tablet.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.galeria__grid {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  gap: 1.875rem;
+  grid-template:
+    'img1'
+    'img2'
+    'img3'
+    'img4'
+    'img5'
+    'img6'
+    'img7'
+    'img8'
+    'img9'
+    'fig';
+}
+
+// GALERÍA - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 16;
+  }
+
+  .galeria__imgc9 {
+    position: relative;
+  }
+
+  .galeria__fig {
+    grid-area: fig;
+    width: 85.375rem;
+    height: 327px;
+    background: url('../img/galeria_pc.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .galeria__grid {
+    display: grid;
+    position: relative;
+    justify-content: space-around;
+    text-align: center;
+    gap: 1.875rem;
+    grid-template:
+      'img1 img2 img3'
+      'img4 img5 img6'
+      'img7 img8 img9'
+      'fig fig fig';
+  }
+}
+
+// GALERÍA - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 18;
+  }
+
+  .galeria__grid {
+    display: grid;
+    justify-content: space-around;
+    position: relative;
+    text-align: center;
+    gap: 1.875rem;
+    grid-template:
+      'img1 img2 img3 img4'
+      'img5 img6 img7 img8'
+      'img9 fig fig fig';
+  }
+}
+
+// SECCIÓN PIE / FOOTER  *************************************
+.pie__grid {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.625rem;
+  position: relative;
+  text-align: center;
+  grid-template:
+    'h2' auto
+    'p1' auto
+    'ico' auto
+    'prod' auto
+    'vinc' auto
+    'enla' auto
+    'p2' auto;
+}
+
+// FOOTER - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 17;
+  }
+
+  .pie__grid .pie__p1 {
+    font-size: 1rem;
+  }
+
+  .pie__grid .pie__iconos {
+    font-size: 1.6875rem;
+    padding: 12px;
+  }
+
+  .pie__grid .pie__p2 {
+    font-size: 0.8125rem;
+  }
+
+  .pie__prod .pie__p3 {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__vinc .pie__p3 {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__enla .pie__p3 {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__prod a {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__vinc a {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__enla a {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__grid {
+    padding-top: 1.875rem;
+    padding-bottom: 0.9375rem;
+    text-align: center;
+    gap: 0.625rem;
+    grid-template:
+      'h2 h2 h2' auto
+      'p1 p1 p1' auto
+      'ico ico ico' auto
+      'prod vinc enla' auto
+      'p2 p2 p2' auto;
+  }
+
+  .pie__strip .pie__p4 {
+    padding: 0.625rem;
+    font-size: 0.75rem;
+    line-height: 0.625rem;
+  }
+
+  .pie__strip .pie__p4 a {
+    padding: 0.625rem;
+    font-size: 0.75rem;
+    line-height: 0.625rem;
+  }
+}
+
+// FOOTER - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 19;
+  }
+
+  .pie__grid .pie__p1 {
+    font-size: 1rem;
+  }
+
+  .pie__grid .pie__iconos {
+    font-size: 1.5625rem;
+  }
+
+  .pie__grid .pie__p2 {
+    font-size: 0.8125rem;
+  }
+
+  .pie__prod .pie__p3 {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__vinc .pie__p3 {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__enla .pie__p3 {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__prod a {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__vinc a {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__enla a {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__grid {
+    padding-top: 4.375rem;
+    padding-bottom: 2.5rem;
+    gap: 1rem;
+    grid-template:
+      'h2 h2 h2 h2 . . prod . vinc . enla .' auto
+      'p1 p1 p1 p1 . . prod . vinc . enla . ' auto
+      'ico ico ico ico . . prod . vinc . enla .' auto
+      'p2 p2 p2 p2 . . prod . vinc . enla .' auto;
+  }
+
+  .pie__strip {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pie__strip .pie__p4 {
+    padding: 0.875rem;
+    font-size: 0.8125rem;
+    line-height: 0.875rem;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .pie__strip .pie__p4 a {
+    padding: 0.875rem;
+    font-size: 0.8125rem;
+    line-height: 0.875rem;
   }
 }
 
 // SECCIÓN PRINCIPAL  **********************
 
-section:nth-of-type(1) {
-  background-color: white;
-}
-section:nth-of-type(2) {
-  background-color: royalblue;
-}
-section:nth-of-type(3) {
-  background-color: salmon;
-}
-section:nth-of-type(4) {
-  background-color: seagreen;
-}
+// section:nth-of-type(1) {
+//   background-color: white;
+// }
+// section:nth-of-type(2) {
+//   background-color: royalblue;
+// }
+// section:nth-of-type(3) {
+//   background-color: salmon;
+// }
+// section:nth-of-type(4) {
+//   background-color: seagreen;
+// }
 section:nth-of-type(5) {
   background-color: skyblue;
 }

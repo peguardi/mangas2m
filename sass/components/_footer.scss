@@ -1,0 +1,120 @@
+@use 'variables' as *;
+
+// PIE / FOOTER  *************************************
+.pie {
+  position: relative;
+  background-color: $color-alter2;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+
+  a {
+    color: $color-menu;
+  }
+
+  .pie__h2 {
+    grid-area: h2;
+    color: $color-titu;
+    text-align: center;
+  }
+
+  .pie__p1 {
+    grid-area: p1;
+    color: $color-parr;
+    text-align: center;
+  }
+
+  .pie__iconos {
+    grid-area: ico;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5625rem;
+
+    a {
+      color: $color-titu;
+    }
+  }
+
+  .pie__p2 {
+    grid-area: p2;
+    color: $color-parr;
+    font-size: 0.6875rem;
+    text-align: center;
+  }
+
+  .pie__prod p {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__vinc p {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__enla p {
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__prod a {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__vinc a {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__enla a {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.0625rem;
+    padding: 0.625rem;
+  }
+
+  .pie__p3 {
+    color: $color-titu;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .pie__prod {
+    grid-area: prod;
+  }
+
+  .pie__vinc {
+    grid-area: vinc;
+  }
+
+  .pie__enla {
+    grid-area: enla;
+  }
+
+  .pie__strip {
+    width: 100%;
+    height: 10%;
+    background-color: $color-prim;
+  }
+
+  .pie__p4 {
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.625rem;
+    text-align: center;
+    line-height: 0.5rem;
+  }
+
+  .pie__p4 a {
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.625rem;
+    text-align: center;
+    line-height: 0.5rem;
+  }
+}
