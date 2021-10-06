@@ -373,120 +373,7 @@ header.sticky {
 }
 
 // SECCIÓN DETALLES  *************************************
-#detalles {
-  display: block;
-
-  span {
-    color: $color-secu;
-  }
-}
-
-.detail__h2 {
-  font-weight: bold;
-  font-size: 2rem;
-  letter-spacing: 0.01em;
-  line-height: 1.875rem;
-  text-align: center;
-  color: $color-titu;
-  padding: 1.25rem;
-}
-
-.detail__asa {
-  grid-area: asa;
-
-  .detail__a {
-    width: 14.375rem;
-    height: 14.375rem;
-    background: url(../img/detail_asa.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
-    // z-index: 1;
-  }
-  .detail__p1 {
-    // grid-area: p1;
-    width: 14.375rem;
-    height: 6.25rem;
-    color: $color-parr;
-    text-align: center;
-    // z-index: 1;
-  }
-}
-
-.detail__med {
-  grid-area: med;
-
-  .detail__m {
-    width: 14.375rem;
-    height: 14.375rem;
-    background: url(../img/detail_medida.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
-    // z-index: 1;
-  }
-  .detail__p2 {
-    // grid-area: p2;
-    width: 14.375rem;
-    height: 9.375rem;
-    color: $color-parr;
-    text-align: center;
-    // z-index: 1;
-  }
-}
-
-.detail__bor {
-  grid-area: bor;
-
-  .detail__b {
-    width: 14.375rem;
-    height: 14.375rem;
-    background: url(../img/detail_borde.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
-    // z-index: 1;
-  }
-
-  .detail__p3 {
-    // grid-area: p3;
-    width: 14.375rem;
-    height: 6.25rem;
-    color: $color-parr;
-    text-align: center;
-    // z-index: 1;
-  }
-}
-
-.detail__boc {
-  grid-area: boc;
-
-  .detail__bo {
-    width: 14.375rem;
-    height: 14.375rem;
-    background: url(../img/detail_boca.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
-    // z-index: 1;
-  }
-
-  .detail__p4 {
-    // grid-area: p4;
-    width: 14.375rem;
-    height: 6.25rem;
-    color: $color-parr;
-    text-align: center;
-    // z-index: 1;
-  }
-}
-
 .detail__fig {
-  grid-area: fig;
   width: 768px;
   height: 281.5px;
   background: url('../img/detail_1.png');
@@ -506,8 +393,7 @@ header.sticky {
     'asa' auto
     'med' auto
     'bor' auto
-    'boc' auto
-    'fig' auto;
+    'boc' auto;
 }
 
 // DETALLES - PANTALLA DE TABLET ***************************************
@@ -521,7 +407,6 @@ header.sticky {
   }
 
   .detail__fig {
-    grid-area: fig;
     width: 85.375rem;
     height: 300.27px;
     background: url('../img/detail_2.png');
@@ -538,8 +423,7 @@ header.sticky {
     padding: 1.875rem;
     grid-template:
       'asa med'
-      'boc bor'
-      'fig fig';
+      'boc bor';
   }
 }
 
@@ -557,14 +441,20 @@ header.sticky {
     padding: 1.875rem;
     grid-template:
       'asa med'
-      'boc bor'
-      'fig fig';
+      'boc bor';
   }
 }
 
-// GALERÍA  **************************************************
+// SECCIÓN GALERÍA  **************************************************
 #galeria {
   display: block;
+
+  img {
+    vertical-align: top;
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+  }
 }
 
 .galeria__h2 {
@@ -578,6 +468,7 @@ header.sticky {
 }
 
 .galeria__p {
+  font-size: 1.0625rem;
   color: $color-parr;
   letter-spacing: 0.03rem;
   line-height: 24px;
@@ -585,205 +476,121 @@ header.sticky {
   text-align: center;
 }
 
-.galeria__imgc1 {
-  grid-area: img1;
+.galeria__imgc {
   width: 11.25rem;
   height: auto;
   border-radius: 16px;
   background: #fff;
   box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MLOUN_04.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc2 {
-  grid-area: img2;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MLOUN_07.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc3 {
-  grid-area: img3;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MLOUN_10.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc4 {
-  grid-area: img4;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MLOUN_16.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc5 {
-  grid-area: img5;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MNYLO_02.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc6 {
-  grid-area: img6;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MNYLO_05.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc7 {
-  grid-area: img7;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MNYLO_06.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc8 {
-  grid-area: img8;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MNYLO_18.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.galeria__imgc9 {
-  grid-area: img9;
-  position: absolute;
-  width: 11.25rem;
-  height: auto;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 8px 8px 16px rgba(76, 191, 191, 0.6);
-
-  .galeria__img {
-    width: 11.25rem;
-    max-width: 200px;
-    height: 180px;
-    background: url(../img/MPLAS_09.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
 }
 
 .galeria__fig {
-  grid-area: fig;
+  // grid-area: fig;
   width: 768px;
   height: 405px;
   background: url('../img/galeria_tablet.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  bottom: 0;
 }
 
 .galeria__grid {
   display: grid;
   position: relative;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
   text-align: center;
-  gap: 1.875rem;
-  grid-template:
-    'img1'
-    'img2'
-    'img3'
-    'img4'
-    'img5'
-    'img6'
-    'img7'
-    'img8'
-    'img9'
-    'fig';
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImg:hover {
+  // opacity: 0.5;
+  transform: scale(120%);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  background-position: center;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: $color-secu;
+  padding: 10px 0;
+  height: 100%;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 33px;
+  right: 35px;
+  color: $color-secu;
+  font-size: 70px;
+  font-weight: normal;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 // GALERÍA - PANTALLA DE TABLET ***************************************
@@ -792,31 +599,14 @@ header.sticky {
     font-size: 16;
   }
 
-  .galeria__imgc9 {
-    position: relative;
-  }
-
   .galeria__fig {
-    grid-area: fig;
     width: 85.375rem;
     height: 327px;
     background: url('../img/galeria_pc.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-  }
-
-  .galeria__grid {
-    display: grid;
-    position: relative;
-    justify-content: space-around;
-    text-align: center;
-    gap: 1.875rem;
-    grid-template:
-      'img1 img2 img3'
-      'img4 img5 img6'
-      'img7 img8 img9'
-      'fig fig fig';
+    bottom: 0;
   }
 }
 
@@ -825,17 +615,702 @@ header.sticky {
   html {
     font-size: 18;
   }
+}
 
-  .galeria__grid {
+// SECCIÓN SERVICIOS  **************************************************
+#servicios {
+  display: block;
+
+  img {
+    vertical-align: top;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+.service__h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.875rem;
+  text-align: center;
+  color: $color-titu;
+  padding: 1.25rem;
+}
+
+.service__logo {
+  grid-area: logo;
+}
+
+.service__p {
+  grid-area: p;
+}
+
+.service__moto {
+  grid-area: moto;
+  width: 120%;
+  height: 120%;
+}
+
+.service__zoom {
+  grid-area: zoo;
+}
+
+.service__mrw {
+  grid-area: mrw;
+}
+
+.service__tealca {
+  grid-area: tea;
+  width: 70%;
+  height: 70%;
+  transform: translateX(21%);
+}
+
+.serv__cont1 {
+  grid-area: cont1;
+}
+
+.serv__cont2 {
+  grid-area: cont2;
+}
+
+.serv__cont3 {
+  grid-area: cont3;
+}
+
+.service__grid2 div .cont__h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.01rem;
+  line-height: 2.0625rem;
+  text-align: center;
+  color: white;
+}
+
+.service__grid2 div .cont__p {
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.serv__p {
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.01rem;
+  line-height: 2.6875rem;
+  text-align: right;
+  color: $color-secu;
+  text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.16);
+}
+
+.service__grid {
+  position: relative;
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 3.75rem;
+  grid-template:
+    'logo' auto
+    'p' auto
+    'moto' auto
+    'zoo' auto
+    'mrw' auto
+    'tea' auto;
+}
+
+.service__grid2 {
+  position: relative;
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 3.75rem;
+  background-color: $color-prim;
+  border-radius: 30px;
+  grid-template:
+    'cont1' auto
+    '.' 25px
+    'cont2' auto
+    '.' 25px
+    'cont3' auto;
+}
+
+.service__content {
+  position: relative;
+  width: 100%;
+  height: 1.875rem;
+}
+
+// SERVICIOS - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 16;
+  }
+
+  .service__grid {
+    position: relative;
     display: grid;
     justify-content: space-around;
-    position: relative;
+    align-content: center;
     text-align: center;
-    gap: 1.875rem;
+    gap: 0.75rem;
+    padding: 2.5rem;
     grid-template:
-      'img1 img2 img3 img4'
-      'img5 img6 img7 img8'
-      'img9 fig fig fig';
+      'logo p p p' auto
+      '. . . .' 25px
+      'moto zoo mrw tea' auto;
+  }
+
+  .service__grid2 {
+    position: relative;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    gap: 1.375rem;
+    padding: 2.5rem;
+    background-color: $color-prim;
+    grid-template: 'cont1 cont2 cont3' auto;
+    // '. .' 25px
+    // 'cont3 cont3' auto;
+  }
+}
+
+// SERVICIOS - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 18;
+  }
+}
+
+// SECCIÓN NOSOTROS  *************************************
+.nost__h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.875rem;
+  text-align: center;
+  color: $color-titu;
+  padding: 1.25rem;
+}
+
+.nost__p {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 43px;
+  text-align: left;
+  color: $color-parr;
+  padding: 30px;
+}
+
+.nost__contcirc {
+  position: relative;
+  width: 20.375rem;
+  height: 20.375rem;
+  transform: translateX(12%);
+
+  .nost__contimg {
+    position: absolute;
+    width: 12rem;
+    height: 11.375rem;
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.4));
+  }
+}
+
+.nost__p2 {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 43px;
+  text-align: right;
+  color: $color-parr;
+  padding: 30px;
+
+  span {
+    color: $color-prim;
+    font-weight: bold;
+  }
+}
+
+.nost__contblob {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 18.5rem;
+  height: 11.9875rem;
+  margin-bottom: 50px;
+  transform: translateX(16%);
+
+  .nost__contfig {
+    position: absolute;
+    width: 8.5813rem;
+    height: 10.7531rem;
+  }
+}
+
+// NOSOTROS - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 18;
+  }
+
+  .nost__contp {
+    width: 40.75rem;
+    height: 19rem;
+
+    .nost__p {
+      font-size: 1rem;
+      padding: 20px;
+    }
+  }
+
+  .nost__contcirc {
+    width: 26.625rem;
+    height: 26.625rem;
+    transform: translateX(71%);
+    top: 40px;
+
+    .nost__contimg {
+      width: 15rem;
+      height: 14.8125rem;
+    }
+  }
+
+  .nost__contp2 {
+    width: 33.125rem;
+    height: 13.0625rem;
+
+    .nost__p2 {
+      position: absolute;
+      font-size: 1rem;
+      padding: 40px;
+      top: 61%;
+    }
+  }
+
+  .nost__contblob {
+    width: 24.75rem;
+    height: 18.2375rem;
+    transform: translateX(0%);
+
+    .nost__contfig {
+      width: 11.7063rem;
+      height: 13.8781rem;
+    }
+  }
+}
+// NOSOTROS - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20;
+  }
+
+  .nost__contp {
+    width: 47rem;
+    height: 12.75rem;
+
+    .nost__p {
+      font-size: 1rem;
+      padding: 40px;
+    }
+  }
+
+  .nost__contcirc {
+    width: 26.625rem;
+    height: 26.625rem;
+    transform: translateX(137%);
+
+    .nost__contimg {
+      width: 15rem;
+      height: 14.8125rem;
+    }
+  }
+
+  .nost__contp2 {
+    width: 26.875rem;
+    height: 13.0625rem;
+
+    .nost__p2 {
+      position: absolute;
+      font-size: 1rem;
+      padding: 40px;
+      top: 60%;
+    }
+  }
+
+  .nost__contblob {
+    width: 24.75rem;
+    height: 18.2375rem;
+    transform: translateX(0%);
+
+    .nost__contfig {
+      width: 11.7063rem;
+      height: 13.8781rem;
+    }
+  }
+}
+
+// SECCIÓN MISIÓN  *************************************
+#mision {
+  span {
+    color: $color-prim;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 30px;
+  }
+}
+
+.misi__h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.875rem;
+  text-align: center;
+  color: $color-titu;
+  padding: 1.25rem;
+}
+
+.misi__p {
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 43px;
+  text-align: left;
+  color: $color-parr;
+}
+
+.misi__tit {
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: 0.02em;
+  line-height: 68px;
+  text-align: left;
+  color: $color-prim;
+  opacity: 0.2;
+  writing-mode: sideways-lr;
+}
+
+.misi__p2 {
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 43px;
+  text-align: left;
+  color: $color-parr;
+}
+
+.misi__contit2 {
+  display: flex;
+  justify-content: right;
+}
+
+.misi__tit2 {
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: 0.02em;
+  line-height: 68px;
+  text-align: left;
+  color: $color-prim;
+  opacity: 0.2;
+  writing-mode: sideways-lr;
+}
+
+.misi__contrect {
+  position: relative;
+  width: 18.5rem;
+  height: 8.1875rem;
+  transform: translateX(20%);
+  margin-bottom: 20px;
+}
+
+.misi__contfig {
+  position: absolute;
+}
+
+// MISIÓN - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 18;
+  }
+
+  .misi__contrect {
+    position: relative;
+    width: 396px;
+    height: 231px;
+    transform: translateX(43%);
+  }
+
+  .misi__contfig {
+    position: absolute;
+    width: 396px;
+    height: 224.88px;
+  }
+}
+
+// MISIÓN - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20;
+  }
+
+  .misi__contrect {
+    position: relative;
+    width: 596px;
+    height: 431px;
+    transform: translateX(50%);
+  }
+
+  .misi__contfig {
+    position: absolute;
+    width: 596px;
+    height: 424.88px;
+  }
+}
+
+// SECCIÓN CONTÁCTANOS  *************************************
+#contacto {
+  display: block;
+
+  p {
+    padding: 20px;
+  }
+}
+
+.azul {
+  color: #1647b9;
+  font-weight: bold;
+}
+
+.verde {
+  color: #13ae3c;
+  font-weight: bold;
+}
+
+.cont__h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.875rem;
+  text-align: center;
+  color: $color-titu;
+  padding: 35px;
+}
+
+.cont__contp {
+  grid-area: p;
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 36px;
+  text-align: center;
+  color: $color-parr;
+}
+
+.cont__fig {
+  grid-area: fig;
+  transform: translateX(80%);
+  width: 9.125rem;
+  height: 7.925rem;
+}
+
+.cont__contp2 {
+  grid-area: p2;
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 36px;
+  text-align: center;
+  color: $color-parr;
+}
+
+.cont__face {
+  grid-area: face;
+  transform: translateX(290%);
+  width: 2.625rem;
+  height: 2.625rem;
+  margin: 20px;
+}
+
+.cont__inst {
+  grid-area: inst;
+  transform: translateX(290%);
+  width: 2.625rem;
+  height: 2.625rem;
+  margin: 20px;
+}
+
+.cont__contp3 {
+  grid-area: p3;
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 36px;
+  text-align: center;
+  color: $color-parr;
+}
+
+.cont__what {
+  grid-area: what;
+  transform: translateX(290%);
+  width: 2.625rem;
+  height: 2.625rem;
+  margin: 20px;
+}
+
+.cont__phone {
+  grid-area: phone;
+  position: absolute;
+  transform: translate(50%, 50%);
+  width: 14rem;
+  height: 11.705rem;
+  margin: 20px;
+  z-index: 1;
+}
+
+.cont__fig2 {
+  grid-area: fig2;
+  position: relative;
+  width: 768px;
+  height: 281.5px;
+  background: url('../img/prod_tablet.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.cont__grid {
+  display: grid;
+  gap: 1rem;
+  padding: 0.625rem;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  grid-template:
+    'p'
+    'fig'
+    'p2'
+    'face'
+    'inst'
+    'p3'
+    'what'
+    'phone'
+    'fig2';
+}
+
+// CONTÁCTANOS - PANTALLA DE TABLET ***************************************
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 19;
+  }
+
+  .cont__face {
+    transform: translateX(180%);
+  }
+
+  .cont__inst {
+    transform: translateX(110%);
+  }
+
+  .cont__what {
+    transform: translateX(100%);
+  }
+
+  .cont__fig {
+    grid-area: fig;
+    transform: translateX(40%);
+    width: 9.125rem;
+    height: 7.925rem;
+  }
+
+  .cont__phone {
+    grid-area: phone;
+    position: absolute;
+    transform: translateX(180%);
+    width: 14rem;
+    height: 11.705rem;
+    margin: 30px;
+    z-index: 1;
+  }
+
+  .cont__fig2 {
+    grid-area: fig2;
+    position: relative;
+    width: 85.375rem;
+    height: 300.27px;
+    background: url('../img/prod_pc.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .cont__grid {
+    display: grid;
+    gap: 1rem;
+    padding: 0.625rem;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    grid-template:
+      // 'p p p'
+
+      'fig p p'
+      'p2 p2 p2'
+      'face . inst'
+      'p3 p3 p3'
+      '. what .'
+      'phone phone phone'
+      'fig2 fig2 fig2';
+  }
+}
+
+// CONTÁCTANOS - PANTALLA DE PC ***************************************
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 21;
+  }
+
+  .cont__fig {
+    grid-area: fig;
+    transform: translateX(40%);
+    width: 246px;
+    height: 226.8px;
+  }
+
+  .cont__phone {
+    grid-area: phone;
+    position: absolute;
+    transform: translateX(320%);
+    width: 14rem;
+    height: 11.705rem;
+    margin: 30px;
+    z-index: 1;
+  }
+
+  .cont__grid {
+    display: grid;
+    gap: 1rem;
+    padding: 0.625rem;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    grid-template:
+      'fig p p'
+      'p2 p2 p2'
+      'face . inst'
+      'p3 p3 p3'
+      '. what .'
+      'phone phone phone'
+      'fig2 fig2 fig2';
   }
 }
 
@@ -1024,15 +1499,15 @@ header.sticky {
 // section:nth-of-type(4) {
 //   background-color: seagreen;
 // }
-section:nth-of-type(5) {
-  background-color: skyblue;
-}
-section:nth-of-type(6) {
-  background-color: slateblue;
-}
-section:nth-of-type(7) {
-  background-color: tan;
-}
-section:nth-of-type(8) {
-  background-color: fuchsia;
-}
+// section:nth-of-type(5) {
+//   background-color: skyblue;
+// }
+// section:nth-of-type(6) {
+//   background-color: slateblue;
+// }
+// section:nth-of-type(7) {
+//   background-color: tan;
+// }
+// section:nth-of-type(8) {
+//   background-color: fuchsia;
+// }

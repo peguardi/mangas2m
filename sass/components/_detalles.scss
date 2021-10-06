@@ -1,0 +1,106 @@
+@use 'variables' as *;
+
+// SECCIÓN DETALLES  *****************************************
+#detalles {
+  display: block;
+
+  span {
+    color: $color-secu;
+  }
+}
+
+.detail__h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  line-height: 1.875rem;
+  text-align: center;
+  color: $color-titu;
+  padding: 1.25rem;
+}
+
+.detail__asa {
+  grid-area: asa;
+
+  .detail__a {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_asa.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+  }
+  .detail__p1 {
+    width: 14.375rem;
+    height: 6.25rem;
+    font-size: 1.0625rem;
+    color: $color-parr;
+    text-align: center;
+  }
+}
+
+.detail__med {
+  grid-area: med;
+
+  .detail__m {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_medida.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+  }
+  .detail__p2 {
+    width: 14.375rem;
+    height: 9.375rem;
+    font-size: 1.0625rem;
+    color: $color-parr;
+    text-align: center;
+  }
+}
+
+.detail__bor {
+  grid-area: bor;
+
+  .detail__b {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_borde.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+  }
+
+  .detail__p3 {
+    width: 14.375rem;
+    height: 6.25rem;
+    font-size: 1.0625rem;
+    color: $color-parr;
+    text-align: center;
+  }
+}
+
+.detail__boc {
+  grid-area: boc;
+
+  .detail__bo {
+    width: 14.375rem;
+    height: 14.375rem;
+    background: url(../img/detail_boca.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.44));
+  }
+
+  .detail__p4 {
+    width: 14.375rem;
+    height: 6.25rem;
+    font-size: 1.0625rem;
+    color: $color-parr;
+    text-align: center;
+  }
+}
