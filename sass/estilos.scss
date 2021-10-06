@@ -998,6 +998,8 @@ header.sticky {
   color: $color-prim;
   opacity: 0.2;
   writing-mode: sideways-lr;
+  -webkit-writing-mode: sideways-lr;
+  -ms-writing-mode: sideways-lr;
 }
 
 .misi__p2 {
@@ -1023,6 +1025,8 @@ header.sticky {
   color: $color-prim;
   opacity: 0.2;
   writing-mode: sideways-lr;
+  -webkit-writing-mode: sideways-lr;
+  -ms-writing-mode: sideways-lr;
 }
 
 .misi__contrect {
