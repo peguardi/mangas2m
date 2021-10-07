@@ -267,14 +267,14 @@ body section {
 
 .prod__card1 {
   grid-area: card1;
-  width: 18.125rem;
+  width: 15.625rem;
   height: 18.8125rem;
   border-radius: 16px;
   background: #fff;
   box-shadow: 8px 8px 16px rgba(119, 19, 191, 0.3);
 }
 .prod__card1 .card1__img1 {
-  width: 18.125rem;
+  width: 15.625rem;
   height: 12.5rem;
   background: url(../img/MNYLO_01.png);
   background-position: center;
@@ -282,7 +282,7 @@ body section {
   background-size: contain;
 }
 .prod__card1 .card1__line1 {
-  width: 15.5412rem;
+  width: 13.75rem;
   height: 0px;
   background: rgba(0, 0, 0, 0);
   border: 0.125rem solid #cfcfcf;
@@ -308,14 +308,14 @@ body section {
 
 .prod__card2 {
   grid-area: card2;
-  width: 18.125rem;
+  width: 15.625rem;
   height: 18.8125rem;
   border-radius: 16px;
   background: #fff;
   box-shadow: 8px 8px 16px rgba(119, 19, 191, 0.3);
 }
 .prod__card2 .card1__img2 {
-  width: 18.125rem;
+  width: 15.625rem;
   height: 12.5rem;
   background: url(../img/MLOES_01.png);
   background-position: center;
@@ -323,7 +323,7 @@ body section {
   background-size: contain;
 }
 .prod__card2 .card1__line2 {
-  width: 15.5412rem;
+  width: 13.75rem;
   height: 0px;
   background: rgba(0, 0, 0, 0);
   border: 0.125rem solid #cfcfcf;
@@ -350,14 +350,14 @@ body section {
 .prod__card3 {
   position: absolute;
   grid-area: card3;
-  width: 18.125rem;
+  width: 15.625rem;
   height: 18.8125rem;
   border-radius: 16px;
   background: #fff;
   box-shadow: 8px 8px 16px rgba(119, 19, 191, 0.3);
 }
 .prod__card3 .card1__img3 {
-  width: 18.125rem;
+  width: 15.625rem;
   height: 12.5rem;
   background: url(../img/MPLAS_07.png);
   background-position: center;
@@ -365,7 +365,7 @@ body section {
   background-size: contain;
 }
 .prod__card3 .card1__line3 {
-  width: 15.5412rem;
+  width: 13.75rem;
   height: 0px;
   background: rgba(0, 0, 0, 0);
   border: 0.125rem solid #cfcfcf;
@@ -779,6 +779,7 @@ header.sticky {
   display: grid;
   gap: 1.875rem;
   justify-content: center;
+  align-content: center;
   position: relative;
   grid-template: "card1" auto "card2" auto "card3" auto "fig" auto;
 }
@@ -1096,9 +1097,9 @@ header.sticky {
 
 .service__tealca {
   grid-area: tea;
-  width: 70%;
-  height: 70%;
-  transform: translateX(21%);
+  width: 60%;
+  height: 60%;
+  transform: translateX(31%);
 }
 
 .serv__cont1 {
@@ -1182,7 +1183,7 @@ header.sticky {
     text-align: center;
     gap: 0.75rem;
     padding: 2.5rem;
-    grid-template: "logo p p p" auto ". . . ." 25px "moto zoo mrw tea" auto;
+    grid-template: "logo logo p p" auto ". . . ." 25px "moto moto zoo zoo" auto "mrw mrw tea tea" auto;
   }
 
   .service__grid2 {
@@ -1201,7 +1202,25 @@ header.sticky {
   html {
     font-size: 18;
   }
+
+  .service__grid {
+    position: relative;
+    display: grid;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 2.5rem;
+    grid-template: "logo logo p p" auto ". . . ." 25px "moto mrw zoo tea" auto;
+  }
 }
+#nosotros {
+  display: block;
+}
+#nosotros p {
+  padding: 20px 20px 20px 30px;
+}
+
 .nost__h2 {
   font-weight: bold;
   font-size: 2rem;
@@ -1212,61 +1231,76 @@ header.sticky {
   padding: 1.25rem;
 }
 
-.nost__p {
+.nost__contp {
+  grid-area: p;
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.01em;
   line-height: 43px;
   text-align: left;
   color: #737373;
-  padding: 30px;
 }
 
 .nost__contcirc {
+  grid-area: circ;
   position: relative;
-  width: 20.375rem;
-  height: 20.375rem;
-  transform: translateX(12%);
+  width: 80%;
+  height: 80%;
+  transform: translateX(20%);
 }
 .nost__contcirc .nost__contimg {
   position: absolute;
-  width: 12rem;
-  height: 11.375rem;
+  width: 50%;
+  height: 50%;
   filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.4));
 }
 
-.nost__p2 {
+.nost__contp2 {
+  grid-area: p2;
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.01em;
   line-height: 43px;
   text-align: right;
   color: #737373;
-  padding: 30px;
 }
-.nost__p2 span {
+.nost__contp2 span {
   color: #7713bf;
   font-weight: bold;
 }
 
 .nost__contblob {
-  display: flex;
+  grid-area: blob;
   position: relative;
-  justify-content: center;
-  width: 18.5rem;
-  height: 11.9875rem;
-  margin-bottom: 50px;
-  transform: translateX(16%);
+  width: 80%;
+  height: 80%;
+  transform: translateX(20%);
+  margin-bottom: 60px;
 }
 .nost__contblob .nost__contfig {
   position: absolute;
-  width: 8.5813rem;
-  height: 10.7531rem;
+  width: 45%;
+  height: 45%;
+  transform: translateX(50%);
+}
+
+.nost__grid {
+  display: grid;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 0.625rem;
+  grid-template: "p" auto "circ" auto "p2" auto "blob" auto;
 }
 
 @media screen and (min-width: 600px) {
   html {
     font-size: 18;
+  }
+
+  #nosotros p {
+    padding: 40px 50px 40px 70px;
   }
 
   .nost__contp {
@@ -1275,39 +1309,47 @@ header.sticky {
   }
   .nost__contp .nost__p {
     font-size: 1rem;
-    padding: 20px;
   }
 
   .nost__contcirc {
-    width: 26.625rem;
-    height: 26.625rem;
-    transform: translateX(71%);
-    top: 40px;
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    transform: translate(90%, 40%);
   }
   .nost__contcirc .nost__contimg {
-    width: 15rem;
-    height: 14.8125rem;
+    width: 50%;
+    height: 50%;
   }
 
   .nost__contp2 {
-    width: 33.125rem;
-    height: 13.0625rem;
+    width: 40.75rem;
+    height: 12rem;
   }
   .nost__contp2 .nost__p2 {
-    position: absolute;
     font-size: 1rem;
-    padding: 40px;
-    top: 61%;
   }
 
   .nost__contblob {
-    width: 24.75rem;
-    height: 18.2375rem;
-    transform: translateX(0%);
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    transform: translatex(20%);
   }
   .nost__contblob .nost__contfig {
-    width: 11.7063rem;
-    height: 13.8781rem;
+    width: 43%;
+    height: 43%;
+    transform: translateX(50%);
+  }
+
+  .nost__grid {
+    display: grid;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center;
+    gap: 1rem;
+    padding: 0.625rem;
+    grid-template: "p p" auto "circ circ" auto "p2 p2" auto "blob blob" auto;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1315,44 +1357,56 @@ header.sticky {
     font-size: 20;
   }
 
+  #nosotros p {
+    padding: 40px 120px 40px 120px;
+  }
+
   .nost__contp {
-    width: 47rem;
-    height: 12.75rem;
+    width: 60.75rem;
+    height: 17rem;
   }
   .nost__contp .nost__p {
     font-size: 1rem;
-    padding: 40px;
   }
 
   .nost__contcirc {
-    width: 26.625rem;
-    height: 26.625rem;
-    transform: translateX(137%);
+    width: 40%;
+    height: 40%;
+    transform: translateX(130%);
   }
   .nost__contcirc .nost__contimg {
-    width: 15rem;
-    height: 14.8125rem;
+    width: 60%;
+    height: 60%;
+    padding: auto;
   }
 
   .nost__contp2 {
-    width: 26.875rem;
-    height: 13.0625rem;
+    width: 60.75rem;
+    height: 12rem;
   }
   .nost__contp2 .nost__p2 {
-    position: absolute;
     font-size: 1rem;
-    padding: 40px;
-    top: 60%;
   }
 
   .nost__contblob {
-    width: 24.75rem;
-    height: 18.2375rem;
-    transform: translateX(0%);
+    width: 40%;
+    height: 40%;
   }
   .nost__contblob .nost__contfig {
-    width: 11.7063rem;
-    height: 13.8781rem;
+    width: 45%;
+    height: 45%;
+    transform: translateX(50%);
+    padding: auto;
+  }
+
+  .nost__grid {
+    display: grid;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center;
+    gap: 1rem;
+    padding: 0.625rem;
+    grid-template: "p p" auto "circ circ" auto "p2 p2" auto "blob blob" auto;
   }
 }
 #mision span {
@@ -1360,7 +1414,7 @@ header.sticky {
   font-weight: bold;
 }
 #mision p {
-  padding: 30px;
+  padding: 20px;
 }
 
 .misi__h2 {
@@ -1384,15 +1438,12 @@ header.sticky {
 
 .misi__tit {
   font-weight: bold;
-  font-size: 80px;
+  font-size: 70px;
   letter-spacing: 0.02em;
   line-height: 68px;
   text-align: left;
   color: #7713bf;
   opacity: 0.2;
-  writing-mode: sideways-lr;
-  -webkit-writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
 }
 
 .misi__p2 {
@@ -1404,33 +1455,23 @@ header.sticky {
   color: #737373;
 }
 
-.misi__contit2 {
-  display: flex;
-  justify-content: right;
-}
-
 .misi__tit2 {
   font-weight: bold;
-  font-size: 80px;
+  font-size: 70px;
   letter-spacing: 0.02em;
   line-height: 68px;
-  text-align: left;
   color: #7713bf;
   opacity: 0.2;
-  writing-mode: sideways-lr;
-  -webkit-writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
 }
 
 .misi__contrect {
   position: relative;
   width: 18.5rem;
   height: 8.1875rem;
-  transform: translateX(20%);
+  transform: translateX(15%);
   margin-bottom: 20px;
 }
-
-.misi__contfig {
+.misi__contrect .misi__contfig {
   position: absolute;
 }
 
@@ -1439,14 +1480,17 @@ header.sticky {
     font-size: 18;
   }
 
+  .misi__tit2 {
+    transform: translateX(50%);
+  }
+
   .misi__contrect {
     position: relative;
     width: 396px;
     height: 231px;
-    transform: translateX(43%);
+    transform: translateX(30%);
   }
-
-  .misi__contfig {
+  .misi__contrect .misi__contfig {
     position: absolute;
     width: 396px;
     height: 224.88px;
@@ -1457,14 +1501,17 @@ header.sticky {
     font-size: 20;
   }
 
+  .misi__tit2 {
+    transform: translateX(70%);
+  }
+
   .misi__contrect {
     position: relative;
     width: 596px;
     height: 431px;
-    transform: translateX(50%);
+    transform: translateX(40%);
   }
-
-  .misi__contfig {
+  .misi__contrect .misi__contfig {
     position: absolute;
     width: 596px;
     height: 424.88px;
@@ -1503,7 +1550,7 @@ header.sticky {
   font-size: 1rem;
   letter-spacing: 0.01em;
   line-height: 36px;
-  text-align: center;
+  text-align: right;
   color: #737373;
 }
 
@@ -1520,7 +1567,7 @@ header.sticky {
   font-size: 1rem;
   letter-spacing: 0.01em;
   line-height: 36px;
-  text-align: center;
+  text-align: left;
   color: #737373;
 }
 
@@ -1546,7 +1593,7 @@ header.sticky {
   font-size: 1rem;
   letter-spacing: 0.01em;
   line-height: 36px;
-  text-align: center;
+  text-align: right;
   color: #737373;
 }
 
@@ -1599,11 +1646,11 @@ header.sticky {
   }
 
   .cont__inst {
-    transform: translateX(110%);
+    transform: translateX(-40%);
   }
 
   .cont__what {
-    transform: translateX(100%);
+    transform: translateX(-10%);
   }
 
   .cont__fig {
@@ -1616,7 +1663,7 @@ header.sticky {
   .cont__phone {
     grid-area: phone;
     position: absolute;
-    transform: translateX(180%);
+    transform: translateX(130%);
     width: 14rem;
     height: 11.705rem;
     margin: 30px;
@@ -1649,6 +1696,18 @@ header.sticky {
     font-size: 21;
   }
 
+  .cont__face {
+    transform: translateX(200%);
+  }
+
+  .cont__inst {
+    transform: translateX(40%);
+  }
+
+  .cont__what {
+    transform: translateX(90%);
+  }
+
   .cont__fig {
     grid-area: fig;
     transform: translateX(40%);
@@ -1659,7 +1718,7 @@ header.sticky {
   .cont__phone {
     grid-area: phone;
     position: absolute;
-    transform: translateX(320%);
+    transform: translateX(230%);
     width: 14rem;
     height: 11.705rem;
     margin: 30px;
@@ -1673,7 +1732,7 @@ header.sticky {
     position: relative;
     justify-content: center;
     text-align: center;
-    grid-template: "fig p p" "p2 p2 p2" "face . inst" "p3 p3 p3" ". what ." "phone phone phone" "fig2 fig2 fig2";
+    grid-template: "fig p p p" "p2 p2 p2 p2" "face . . inst" "p3 p3 p3 p3" ". what what ." "phone phone phone phone" "fig2 fig2 fig2 fig2";
   }
 }
 .pie__grid {
