@@ -1250,8 +1250,8 @@ header.sticky {
 }
 .nost__contcirc .nost__contimg {
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.4));
 }
 
@@ -1315,11 +1315,12 @@ header.sticky {
     width: 50%;
     height: 50%;
     padding: 30px;
-    transform: translate(90%, 40%);
+    transform: translate(90%, 20%);
   }
   .nost__contcirc .nost__contimg {
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translateY(20%);
   }
 
   .nost__contp2 {
@@ -1375,8 +1376,8 @@ header.sticky {
     transform: translateX(130%);
   }
   .nost__contcirc .nost__contimg {
-    width: 60%;
-    height: 60%;
+    width: 65%;
+    height: 65%;
     padding: auto;
   }
 
@@ -1573,17 +1574,18 @@ header.sticky {
 
 .cont__face {
   grid-area: face;
-  transform: translateX(290%);
-  width: 2.625rem;
-  height: 2.625rem;
+  transform: translateX(200%);
+  width: 3.25rem;
+  height: 3.25rem;
   margin: 20px;
+  margin-bottom: 40px;
 }
 
 .cont__inst {
   grid-area: inst;
-  transform: translateX(290%);
-  width: 2.625rem;
-  height: 2.625rem;
+  transform: translateX(200%);
+  width: 3.25rem;
+  height: 3.25rem;
   margin: 20px;
 }
 
@@ -1599,9 +1601,9 @@ header.sticky {
 
 .cont__what {
   grid-area: what;
-  transform: translateX(290%);
-  width: 2.625rem;
-  height: 2.625rem;
+  transform: translateX(200%);
+  width: 3.25rem;
+  height: 3.25rem;
   margin: 20px;
 }
 
@@ -1646,7 +1648,7 @@ header.sticky {
   }
 
   .cont__inst {
-    transform: translateX(-40%);
+    transform: translateX(-60%);
   }
 
   .cont__what {
@@ -1701,7 +1703,7 @@ header.sticky {
   }
 
   .cont__inst {
-    transform: translateX(40%);
+    transform: translateX(0%);
   }
 
   .cont__what {
