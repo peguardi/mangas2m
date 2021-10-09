@@ -1213,18 +1213,18 @@ header.sticky {
 
 .cont__face {
   grid-area: face;
-  transform: translateX(200%);
-  width: 3.25rem;
-  height: 3.25rem;
+  transform: translateX(180%);
+  width: 3.875rem;
+  height: 3.875rem;
   margin: 20px;
   margin-bottom: 40px;
 }
 
 .cont__inst {
   grid-area: inst;
-  transform: translateX(200%);
-  width: 3.25rem;
-  height: 3.25rem;
+  transform: translateX(180%);
+  width: 3.875rem;
+  height: 3.875rem;
   margin: 20px;
 }
 
@@ -1240,9 +1240,9 @@ header.sticky {
 
 .cont__what {
   grid-area: what;
-  transform: translateX(200%);
-  width: 3.25rem;
-  height: 3.25rem;
+  transform: translateX(180%);
+  width: 3.875rem;
+  height: 3.875rem;
   margin: 20px;
 }
 
@@ -1431,12 +1431,12 @@ header.sticky {
   }
 
   .pie__grid .pie__iconos {
-    font-size: 1.6875rem;
+    font-size: 2.9375rem;
     padding: 12px;
   }
 
   .pie__grid .pie__p2 {
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
   }
 
   .pie__prod .pie__p3 {
@@ -1484,13 +1484,13 @@ header.sticky {
 
   .pie__strip .pie__p4 {
     padding: 0.625rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: 0.625rem;
   }
 
   .pie__strip .pie__p4 a {
     padding: 0.625rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: 0.625rem;
   }
 }
@@ -1506,11 +1506,11 @@ header.sticky {
   }
 
   .pie__grid .pie__iconos {
-    font-size: 1.5625rem;
+    font-size: 3.125rem;
   }
 
   .pie__grid .pie__p2 {
-    font-size: 0.8125rem;
+    font-size: 1rem;
   }
 
   .pie__prod .pie__p3 {
@@ -1561,7 +1561,7 @@ header.sticky {
 
   .pie__strip .pie__p4 {
     padding: 0.875rem;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     line-height: 0.875rem;
     margin-left: 60px;
     margin-right: 60px;
@@ -1569,7 +1569,7 @@ header.sticky {
 
   .pie__strip .pie__p4 a {
     padding: 0.875rem;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     line-height: 0.875rem;
   }
 }
