@@ -1644,7 +1644,7 @@ header.sticky {
   }
 
   .cont__face {
-    transform: translateX(180%);
+    transform: translateX(150%);
   }
 
   .cont__inst {
@@ -1699,7 +1699,7 @@ header.sticky {
   }
 
   .cont__face {
-    transform: translateX(200%);
+    transform: translateX(180%);
   }
 
   .cont__inst {
@@ -1707,7 +1707,7 @@ header.sticky {
   }
 
   .cont__what {
-    transform: translateX(90%);
+    transform: translateX(70%);
   }
 
   .cont__fig {
